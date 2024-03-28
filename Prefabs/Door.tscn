@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3 uid="uid://dpfnubq3syeiy"]
+
+[ext_resource type="Script" path="res://Prefabs/Door.gd" id="1_8irim"]
+[ext_resource type="Script" path="res://Scripts/InteractComponent.gd" id="1_xqugo"]
+[ext_resource type="Texture2D" uid="uid://hktfmh1una5i" path="res://Assets/Tiles/FullTileset.png" id="2_ci5go"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rc2kk"]
+atlas = ExtResource("2_ci5go")
+region = Rect2(176, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63muo"]
+atlas = ExtResource("2_ci5go")
+region = Rect2(197, 172, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rfkqt"]
+size = Vector2(16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_outdg"]
+atlas = ExtResource("2_ci5go")
+region = Rect2(176, 176, 16, 16)
+
+[node name="Door" type="Node2D"]
+script = ExtResource("1_8irim")
+door_shut_sprite = SubResource("AtlasTexture_rc2kk")
+door_open_sprite = SubResource("AtlasTexture_63muo")
+
+[node name="InteractComponent" type="Area2D" parent="."]
+position = Vector2(8, 8)
+script = ExtResource("1_xqugo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractComponent"]
+shape = SubResource("RectangleShape2D_rfkqt")
+
+[node name="SpriteComponent" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("AtlasTexture_outdg")
+offset = Vector2(8, 8)
+
+[connection signal="area_entered" from="InteractComponent" to="." method="_on_interact_component_area_entered"]

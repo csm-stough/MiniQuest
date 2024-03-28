@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://wqf6ia7wui5v"]
+
+[ext_resource type="Script" path="res://Scripts/MoveComponent.gd" id="2_6qfep"]
+[ext_resource type="Script" path="res://Scripts/AnimationComponent.gd" id="3_xcqvu"]
+[ext_resource type="SpriteFrames" uid="uid://bmfbxtamvvktc" path="res://Resources/sword_blue.tres" id="4_5hdv4"]
+[ext_resource type="Script" path="res://Scripts/TilemapInterfaceComponent.gd" id="5_8lu84"]
+
+[node name="Player" type="Node2D"]
+scale = Vector2(2, 2)
+
+[node name="MoveComponent" type="Node2D" parent="."]
+script = ExtResource("2_6qfep")
+
+[node name="AnimationComponent" type="Node2D" parent="."]
+texture_filter = 1
+position = Vector2(8, 8)
+script = ExtResource("3_xcqvu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimationComponent"]
+sprite_frames = ExtResource("4_5hdv4")
+animation = &"idle"
+
+[node name="TilemapInterfaceComponent" type="Node2D" parent="."]
+script = ExtResource("5_8lu84")

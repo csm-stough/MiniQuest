@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://cvgpkmhrcdb2t"]
+
+[ext_resource type="Script" path="res://Scripts/NPC.gd" id="1_q8wyn"]
+[ext_resource type="PackedScene" uid="uid://cfpiri2am7oln" path="res://Prefabs/Components/animation_component.tscn" id="2_iqlnr"]
+[ext_resource type="SpriteFrames" uid="uid://xl5knjo14k8s" path="res://Resources/wizard_blue.tres" id="2_x26sl"]
+[ext_resource type="Script" path="res://Scripts/InteractComponent.gd" id="3_pwmm7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yr0dw"]
+
+[node name="Npc" type="Node2D"]
+script = ExtResource("1_q8wyn")
+sprite_frames = ExtResource("2_x26sl")
+
+[node name="AnimationComponent" parent="." instance=ExtResource("2_iqlnr")]
+
+[node name="InteractComponent" type="Area2D" parent="."]
+position = Vector2(8, 24)
+script = ExtResource("3_pwmm7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractComponent"]
+scale = Vector2(0.25, 0.25)
+shape = SubResource("RectangleShape2D_yr0dw")
+
+[connection signal="area_entered" from="InteractComponent" to="InteractComponent" method="_on_area_entered"]
+[connection signal="area_exited" from="InteractComponent" to="InteractComponent" method="_on_area_exited"]

@@ -1,0 +1,7 @@
+1. Find alternate Assets for characters (ones without weapons, but still need to be animated)
+
+2. Come up with a 3rd major concept for the game
+
+3. Come up with a way to hide an area of the map, and revealing it based on a toggleable door
+
+4. Come up with a simple story

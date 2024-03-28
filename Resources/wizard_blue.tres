@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://xl5knjo14k8s"]
+
+[ext_resource type="Texture2D" uid="uid://bcd72a338c5dd" path="res://Assets/Sprite Sheets/Wizard/Wizard_Blue1.png" id="1_awx8w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kxw7t"]
+atlas = ExtResource("1_awx8w")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gij53"]
+atlas = ExtResource("1_awx8w")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_taj04"]
+atlas = ExtResource("1_awx8w")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqfgg"]
+atlas = ExtResource("1_awx8w")
+region = Rect2(96, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kxw7t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gij53")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_taj04")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqfgg")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]

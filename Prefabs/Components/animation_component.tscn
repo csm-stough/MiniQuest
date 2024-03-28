@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfpiri2am7oln"]
+
+[ext_resource type="Script" path="res://Scripts/AnimationComponent.gd" id="1_wdjg7"]
+
+[node name="AnimationComponent" type="Node2D"]
+texture_filter = 1
+position = Vector2(8, 8)
+script = ExtResource("1_wdjg7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+animation = &""

@@ -1,0 +1,29 @@
+MiniQuest Planning
+
+Overview:
+	Miniquest is a small advenure game without combat. The player must travel through the open world
+	and find items to be able to progress. 
+	
+	The world is essentially a large puzzle where the player will constantly encounter roadblocks that
+	are requiring a certain item to progress. 
+	
+	The big 2/3 concepts in this game:
+		- Items that allow for progression
+		- Secrets that point to lore and story
+		- ......
+	
+	These items are things like:
+		- pickaxe to break boulders
+		- machete to clear vines
+		- lantern to light up darkness
+	
+	There should also be environmental puzzles, things like:
+		- clues hidden in plain sight in the world, possibly words or arrows written with tiles
+		- illusory walls, like in dark souls ;)
+		- ruins scattered around the world with a decipherable language that explains some lore and 
+			points to secrets (this could just be a simple substitution cipher or an alternate font)
+			
+	One major component to make this a cohesive design would be create intersections of these concepts:
+		- Player must explore to find secret lore/solve lore puzzles to find a hidden item that allows
+			for progression
+		** Once I come up with a 3rd major concept, I'll have 2 more intersections
