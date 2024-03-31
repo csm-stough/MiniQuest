@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://dg5urtjcimv8v"]
+
+[ext_resource type="Texture2D" uid="uid://8x0v20mjqq32" path="res://Assets/UI Elements/dialog_cursor.png" id="1_m1dks"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vs5y"]
+atlas = ExtResource("1_m1dks")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rois"]
+atlas = ExtResource("1_m1dks")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wan52"]
+atlas = ExtResource("1_m1dks")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5fo8"]
+atlas = ExtResource("1_m1dks")
+region = Rect2(0, 48, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vs5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rois")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wan52")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5fo8")
+}],
+"loop": true,
+"name": &"bounce",
+"speed": 5.0
+}]
